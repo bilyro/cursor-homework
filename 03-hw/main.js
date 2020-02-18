@@ -56,6 +56,16 @@ function getRandomPassword() {
     return Math.floor(Math.random() * 100000000);
 }
 
+//  function 9 
+function deleteLetter(str) {
+    let pureStr = "";
+    for(let i = 0; i < str.length; i++) {
+        if(str[i] != "a") {
+            pureStr += str[i];
+        }
+    }
+    return pureStr
+}
 
 document.write(`
 function 1 => ${getMaxDigit(1908)} </br>
@@ -65,4 +75,5 @@ function 4 => ${tax(12000)}  </br>
 function 5 => ${getRandomNumber(1, 10)}  </br>
 function 6 => ${countLetter("a", "basketball")}  </br>
 function 8 => ${getRandomPassword()}  </br>
+function 9 => ${deleteLetter("basketball is a fun game")}  </br>
 `)
